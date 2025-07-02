@@ -19,11 +19,11 @@ def main():
     sheet_Values["B2"].options(np.array, transpose=True).value=QO_values
     fig, ax = plt.subplots()
     ax.set_title(f"Qo vs PWF")
-    ax.plot(PWF, QO_values, label='Qo')
+    ax.plot(QO_values, PWF, label='Qo')
 
     ax.legend()
-    ax.set_ylabel('Qo [stb/d]')
-    ax.set_xlabel('Pressure [psi]')
+    ax.set_xlabel('Qo [stb/d]')
+    ax.set_ylabel('Pressure [psi]')
     ax.grid()
 
     mainsheet.pictures.add(fig, name='Plot', update=True,
