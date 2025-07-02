@@ -24,6 +24,8 @@ def main():
     ax.legend()
     ax.set_xlabel('Qo [stb/d]')
     ax.set_ylabel('Pressure [psi]')
+    ax.set_xlim(0)
+    ax.set_ylim(0)
     ax.grid()
 
     mainsheet.pictures.add(fig, name='Plot', update=True,
